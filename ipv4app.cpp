@@ -39,8 +39,9 @@ int main(int argc, char* argv[])
     }
 
     unsigned int  prefix{};
+    unsigned int ipv4Result = ipv4StrToUint(argv[1], prefix);
 
-    if (doesHostBelongToIPv4(ipv4StrToUint(argv[1], prefix), hostStrToUint(argv[2]), prefix))
+    if (doesHostBelongToIPv4(ipv4Result, hostStrToUint(argv[2]), prefix))
     {
         cout << "The provided host belongs to the IPv4." << endl;
     }
